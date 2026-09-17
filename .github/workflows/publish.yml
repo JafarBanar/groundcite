@@ -2,7 +2,7 @@ name: publish
 
 # Publishes to PyPI on a GitHub release, using PyPI Trusted Publishing (no token).
 # One-time setup on pypi.org: Your projects -> Publishing -> add GitHub publisher
-#   owner: JafarBanar, repository: cite-guard, workflow: publish.yml, environment: pypi
+#   owner: JafarBanar, repository: groundcite, workflow: publish.yml, environment: pypi
 
 on:
   release:

@@ -1,4 +1,4 @@
-"""Command line: ``cite-guard check answer.md --sources 1 2 3`` exits 1 on failure.
+"""Command line: ``groundcite check answer.md --sources 1 2 3`` exits 1 on failure.
 
 Meant for CI gates and evaluation scripts: run the model offline, save answers,
 check them here, fail the build if any answer cites a source it was not given.
@@ -17,8 +17,8 @@ from .patterns import PRESETS, custom
 
 
 def _build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="cite-guard", description=__doc__)
-    parser.add_argument("--version", action="version", version=f"cite-guard {__version__}")
+    parser = argparse.ArgumentParser(prog="groundcite", description=__doc__)
+    parser.add_argument("--version", action="version", version=f"groundcite {__version__}")
     sub = parser.add_subparsers(dest="command", required=True)
 
     check = sub.add_parser("check", help="validate one answer file")

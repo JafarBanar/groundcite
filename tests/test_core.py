@@ -4,7 +4,7 @@ import sys
 
 import pytest
 
-from cite_guard import (
+from groundcite import (
     BRACKET_ID,
     NUMERIC,
     SOURCE_N,
@@ -129,10 +129,10 @@ def test_report_is_json_serialisable():
 def test_cli_exit_codes(tmp_path):
     answer = tmp_path / "a.md"
     answer.write_text(GOOD, encoding="utf-8")
-    ok = subprocess.run([sys.executable, "-m", "cite_guard.cli", "check", str(answer),
+    ok = subprocess.run([sys.executable, "-m", "groundcite.cli", "check", str(answer),
                          "--sources", "1", "2", "3"], capture_output=True, text=True)
     assert ok.returncode == 0 and ok.stdout.startswith("OK")
-    bad = subprocess.run([sys.executable, "-m", "cite_guard.cli", "check", str(answer),
+    bad = subprocess.run([sys.executable, "-m", "groundcite.cli", "check", str(answer),
                           "--sources", "1", "--json"], capture_output=True, text=True)
     assert bad.returncode == 1
     assert json.loads(bad.stdout)["unresolved_refs"] == ["2", "3"]

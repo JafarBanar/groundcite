@@ -125,7 +125,7 @@ def validate(
         text: The model's answer (plain text or Markdown).
         sources: Identifiers of the sources that were actually supplied to the
             model, e.g. ``[1, 2, 3]`` or ``["SB-2231", "manual-ch4"]``.
-        pattern: How citations look in ``text``; see :mod:`cite_guard.patterns`.
+        pattern: How citations look in ``text``; see :mod:`groundcite.patterns`.
         min_coverage: Required share of factual sentences that carry a citation,
             0.0 to 1.0. Use ``0.0`` to check resolution only.
         min_words: Sentences shorter than this are not counted as factual.

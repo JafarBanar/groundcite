@@ -1,13 +1,13 @@
-"""cite-guard: verify in code that an LLM answer cites only the sources it was given.
+"""groundcite: verify in code that an LLM answer cites only the sources it was given.
 
-The model is asked to cite. That is a request. ``cite_guard`` re-checks the answer
+The model is asked to cite. That is a request. ``groundcite`` re-checks the answer
 in plain Python after the model has spoken: every citation must resolve to a
 source that was actually supplied, and (optionally) every factual sentence must
 carry one. If the check fails, the caller refuses instead of returning the text.
 
 Typical use in a retrieval-augmented pipeline::
 
-    from cite_guard import validate, NUMERIC
+    from groundcite import validate, NUMERIC
 
     report = validate(answer_text, sources=[1, 2, 3, 4, 5], pattern=NUMERIC)
     if not report.ok:

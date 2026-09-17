@@ -1,5 +1,7 @@
 # groundcite
 
+[![PyPI](https://img.shields.io/pypi/v/groundcite.svg)](https://pypi.org/project/groundcite/) [![CI](https://github.com/JafarBanar/groundcite/actions/workflows/ci.yml/badge.svg)](https://github.com/JafarBanar/groundcite/actions/workflows/ci.yml) ![Python](https://img.shields.io/pypi/pyversions/groundcite.svg)
+
 Verify in code that an LLM answer cites only the sources it was actually given.
 
 Asking a model to cite its sources is a request. Checking it in Python is a guarantee.

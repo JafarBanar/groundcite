@@ -8,13 +8,13 @@ version = "0.1.0"
 description = "Verify in code that an LLM answer cites only the sources it was actually given. A guarantee, not a prompt."
 readme = "README.md"
 license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.9"
 authors = [{ name = "Jafar Banar", email = "jaafar.banar@gmail.com" }]
 keywords = ["llm", "rag", "citations", "hallucination", "grounding", "evaluation", "guardrail"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
-  "License :: OSI Approved :: MIT License",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
